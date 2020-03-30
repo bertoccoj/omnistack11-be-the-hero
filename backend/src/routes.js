@@ -17,11 +17,7 @@ routes.post('/ongs', celebrate({
   }),
 }), ongsController.create);
 
-routes.get('/ongs', celebrate({
-  [Segments.HEADERS]: Joi.object({
-    authorization: Joi.string().required().length(8)
-  }).unknown(),
-}), ongsController.index);
+routes.get('/ongs', ongsController.index);
 
 // incidents
 routes.get('/incidents', celebrate({
