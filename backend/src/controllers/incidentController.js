@@ -24,11 +24,8 @@ module.exports = {
   },
 
   async create(request, response) {
-
     const { title, description, value } = request.body;
     const ong_id = request.headers.authorization;
-    console.log(request.headers);
-
 
     const [id] = await connection('incidents').insert({
       title,
@@ -43,25 +40,13 @@ module.exports = {
   async delete(request, response) {
     const { params: { id }, headers: { authorization: ong_id }} = request;
 
-    if (!ong_id) {
-      return response.status(401).send({ error: 'Operation not permitted' });
-    }
-
-    if (isNaN(id)) {
-        return response.status(400).send({ error: 'Invalid id' });
-    }
-
     const incident = await connection('incidents')
       .where('id', id)
       .select('ong_id')
       .first();
 
     if (!incidents || !incidents.lenght) {
-        return response.status(400).send({ error: 'Não foi encontrado nenhum caso para a ong informada' });
-    }
-
-    if (!incident) {
-      return response.status(400).send();
+      return response.status(400).send({ error: 'Não foi encontrado nenhum caso para a ong informada' });
     }
 
     if (incident.ong_id !== ong_id) {
