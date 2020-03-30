@@ -43,7 +43,7 @@ routes.delete('/incidents/:id', celebrate({
   }),
   [Segments.HEADERS]: Joi.object({
     authorization: Joi.string().required().length(8),
-  })
+  }).unknown(),
 }), incidentsController.delete);
 
 // profile
