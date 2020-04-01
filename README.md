@@ -25,9 +25,9 @@ Passos para executar </h3>
   $ npm start
 ```
 
-- Para iniciar a aplicação MOBILE, dentro de "mobiler" execute:
-  ```shell
-    $ npm install
-    $ npm start
+- Para iniciar a aplicação MOBILE, dentro de "mobile" execute:
+```shell
+  $ npm install
+  $ npm start
   ```
-   - então conecte-se pelo aplicativo do expo usando o qr code
+  - então conecte-se pelo aplicativo do expo usando o qr code
