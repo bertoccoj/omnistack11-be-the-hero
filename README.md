@@ -6,9 +6,11 @@ Projeto desenvolvido durante a semana OmniStack 11
 ![alt text](./frontend/src/assets/logo.svg "Be The Hero")
 
 
-<h3>Aplicação desenvolvida utilizando nodeJS, reactJS e react native durante a Semana OmniStack 11 da rocketseat.
+<h3>Aplicação desenvolvida utilizando nodeJS, reactJS e react native durante a Semana OmniStack 11 da rocketseat.</h3>
 
-Passos para executar </h3>
+
+
+<h3> Passos para executar </h3>
 
 - Iniciar servidor
   - Dentro da pasta "backend":
